@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PORKYS_.TTF">
+            <string>Porkys</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapMeFast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-lu-BXA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1080"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Me Fast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-pt-9uU">
+                                <rect key="frame" x="16" y="20" width="343" height="201.5"/>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="75"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="BSN-va-f9d">
+                                <rect key="frame" x="16" y="230" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.24954516267123289" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6lV-0D-Pj1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="75"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDc-uJ-IDy">
+                                <rect key="frame" x="16" y="446" width="343" height="201"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.24954516269999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="65"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAc-lC-vcG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ix7-6a-Hzl">
+                                <rect key="frame" x="16" y="338" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.24954516267123289" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FdD-Yy-nl2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="75"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Djp-lu-BXA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="24J-LS-rS9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bDc-uJ-IDy" secondAttribute="bottom" constant="20" id="7Pd-Pc-rw3"/>
+                            <constraint firstItem="BSN-va-f9d" firstAttribute="top" secondItem="T7z-pt-9uU" secondAttribute="bottom" constant="8.5" id="7jO-kd-CaU"/>
+                            <constraint firstItem="Djp-lu-BXA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Abx-nv-mCw"/>
+                            <constraint firstItem="Djp-lu-BXA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BJj-5q-6zW"/>
+                            <constraint firstItem="BSN-va-f9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ica-s0-duH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BSN-va-f9d" secondAttribute="trailing" constant="16" id="JIC-mC-mzb"/>
+                            <constraint firstItem="bDc-uJ-IDy" firstAttribute="top" secondItem="ix7-6a-Hzl" secondAttribute="bottom" constant="8" id="KQb-A0-9T3"/>
+                            <constraint firstItem="Djp-lu-BXA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mnu-Yv-ajY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ix7-6a-Hzl" secondAttribute="trailing" constant="16" id="Q1x-dX-Us9"/>
+                            <constraint firstItem="T7z-pt-9uU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Via-ZY-VWI"/>
+                            <constraint firstItem="bDc-uJ-IDy" firstAttribute="height" secondItem="T7z-pt-9uU" secondAttribute="height" id="cpa-Jh-37t"/>
+                            <constraint firstItem="T7z-pt-9uU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="env-TM-6dt"/>
+                            <constraint firstItem="ix7-6a-Hzl" firstAttribute="top" secondItem="BSN-va-f9d" secondAttribute="bottom" constant="8" id="n4t-h7-mgk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDc-uJ-IDy" secondAttribute="trailing" constant="16" id="ncZ-iu-6z7"/>
+                            <constraint firstItem="bDc-uJ-IDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pU0-4y-ZNT"/>
+                            <constraint firstItem="ix7-6a-Hzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pcD-Wc-mu7"/>
+                            <constraint firstItem="Djp-lu-BXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uZB-iC-amu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T7z-pt-9uU" secondAttribute="trailing" constant="16" id="wIg-D4-NZc"/>
+                            <constraint firstItem="Djp-lu-BXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z9F-rC-jFg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="ix7-6a-Hzl" id="2zy-LY-FiP"/>
+                        <outlet property="startGameButton" destination="bDc-uJ-IDy" id="u0g-xK-zWf"/>
+                        <outlet property="timeLabel" destination="BSN-va-f9d" id="lwm-kG-tTm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+    </resources>
 </document>
