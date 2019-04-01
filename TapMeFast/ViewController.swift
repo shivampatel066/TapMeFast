@@ -56,7 +56,7 @@ class ViewController: UIViewController {
             timeLabel.text = String(timerInt)
             scoreLabel.text = String(scoreInt)
             timeLabel.font = timeLabel.font.withSize(75)
-            startGameButton.setTitle("Start", for: UIControlState.normal)
+            startGameButton.setTitle("Start", for: UIControl.State.normal)
         }
         
         
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         timerInt -= 1
         timeLabel.text = String(timerInt)
         
-        startGameButton.setTitle("Tap", for: UIControlState.normal)
+        startGameButton.setTitle("Tap", for: UIControl.State.normal)
         
         gameInt = 1
         
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
             startGameButton.isEnabled = false
             startGameButton.alpha = 0.5
             
-            startGameButton.setTitle("Restart", for: UIControlState.normal)
+            startGameButton.setTitle("Restart", for: UIControl.State.normal)
             
             displayResult()
             
