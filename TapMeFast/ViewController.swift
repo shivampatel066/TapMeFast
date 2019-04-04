@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         } else {
             timerInt = 10
             scoreInt = 0
-            timeLabel.text = String(timerInt)
+            timeLabel.text = String("Time : \(timerInt)")
             scoreLabel.text = String(scoreInt)
             timeLabel.font = timeLabel.font.withSize(75)
             startGameButton.setTitle("Start", for: UIControl.State.normal)
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     @objc func updateTimer()
     {
         timerInt -= 1
-        timeLabel.text = String(timerInt)
+        timeLabel.text = String("Time : \(timerInt)")
         
         startGameButton.setTitle("Tap", for: UIControl.State.normal)
         
